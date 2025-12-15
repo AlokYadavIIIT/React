@@ -1,3 +1,8 @@
+//    A custom render function to mimic React's rendering behavior
+//   This function takes a React element object and a container DOM element
+//   and appends the corresponding DOM element to the container.
+  //  THIS IS CALLED CUSTOM RENDER FUNCTION METHOD TO CREATE AN REACT;
+
 function custonRender(reactElement, container){
 
 //     const domElement = document.createElement(reactElement.type);
