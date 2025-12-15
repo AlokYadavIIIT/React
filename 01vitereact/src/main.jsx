@@ -20,7 +20,7 @@ function MyApp(){
 //     children: 'click me to visit google'
 // }
 
-// create another react element using React so that no need to convert it into Html form;
+// create anotherElement(line34) using React so that no need to convert it into Html form;
 
 const anotherUser = "chai aur react"
 

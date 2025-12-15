@@ -8,14 +8,14 @@ const username = "chai aur code"
   return (
     <>
     <Chai/>
-    <h1>chai aur react {username}</h1>// to denote variable we 
-    //use {} ,,  here username is not a javascript it is 
-    //evaluated javascript or we can say it is final form 
-    //of javasscript
+    <h1>chai aur react {username}</h1>
     <p>test para</p>
     </>
     
   )
 }
-
+// to denote variable we 
+    //use {} ,,  here username is not a javascript it is 
+    //evaluated javascript or we can say it is final form 
+    //of javasscript
 export default App
