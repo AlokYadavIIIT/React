@@ -20,17 +20,6 @@ function App() {
       }
       //counter = counter + 1
       setCounter(counter +1)
-      setCounter(counter +1)
-      setCounter(counter +1)
-      setCounter(counter +1)// all four only written or seen as four but only one of them will be executed
-      // because react batches the state updates for performance optimization
-
-      //If we want to update the state based on the previous state value, we should use the functional form of the state updater function.
-      // setCounter((prevCounter) => prevCounter + 1);  
-      // setCounter((prevCounter) => prevCounter + 1);
-      // setCounter((prevCounter) => prevCounter + 1);
-      // setCounter((prevCounter) => prevCounter + 1);// we named any thing to prevcounter llike counter only.
-
     }
     const removeValue = () =>{
       if(counter <=0){
