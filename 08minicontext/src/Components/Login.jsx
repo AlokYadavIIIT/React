@@ -10,7 +10,7 @@ function Login() {
     const {setUser} = useContext(UserContext)
     const handleSubmit = (e) => {
         e.preventDefault()//it is use bcz sometimes during submission value will forwarded somewhere
-        setUser({username,password})
+        setUser({username,password})// setting the user data in context
     }
     return (
         <div>
