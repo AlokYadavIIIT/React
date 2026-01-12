@@ -66,4 +66,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
-)
+)//RouterProvider is wrapper(on which all is wrap) which is responsible for making the router
