@@ -1,6 +1,6 @@
 import Chai from "./chai";
 function App() {
-// JSX code : it has a rule that we have to only writ or 
+// JSX code : it has a rule that we have to only write or 
 // return only html tag but we have a right to write as 
 // many as we want tags inside one tag there is no 
 // boundation
