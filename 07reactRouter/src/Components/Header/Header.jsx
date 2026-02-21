@@ -4,7 +4,7 @@ import {Link,NavLink} from 'react-router-dom'
 // Link : it is used in place of 'a' tag , since 'a' tag refreshes whole pages 
 // whereas  Link is editted(add) the previous dom by comparing new one
 //      in Link in place href we write "to"
-
+//"href" of a tag = "to" of link
 //NavLink contains some additional packages
 export default function Header() {
     return (
@@ -33,7 +33,9 @@ export default function Header() {
                         </Link>
                     </div>
                     <div
-                        className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+                    // I have remoed the "hidden" class from the below div because it is used to hide the menu in mobile view and show it in desktop view but since we are not implementing the toggle functionality for mobile view so we can remove it.
+                    //  before : className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+                        className=" justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
                         id="mobile-menu-2"
                     >
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -59,7 +61,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <NavLink
-                                to="/about"
+                                to="/about"// it indicate the path of the page where we want to navigate when we click on the link
                                     className={({isActive}) =>
                                         `block py-2 pr-4
                                         pl-3 duration-200 
