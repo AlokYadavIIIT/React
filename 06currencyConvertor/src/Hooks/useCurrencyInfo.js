@@ -13,7 +13,7 @@ function useCurrencyInfo(currency){
             // console.log(res[currency]);
     },[currency])
     console.log(data);
-    return data;
+    return data;// we are returning the data which is the exchange rate of the currency with respect to usd, so that we can use it in our component to convert the amount from one currency to another.
 }
 
 export default useCurrencyInfo;

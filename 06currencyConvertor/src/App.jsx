@@ -10,9 +10,9 @@ function App() {
   const [to, setTo] = useState("inr")
   const [convertedAmount, setConvertedAmount] = useState(0)
 
-  const currencyInfo = useCurrencyInfo(from)
+  const currencyInfo = useCurrencyInfo(from )
 
-  const options = Object.keys(currencyInfo)// from here we get the all keys(other currency except "usd") of object(currencyInfo="usd") contains
+  const options = Object.keys(currencyInfo || {})// from here we get the all keys(other currency except "usd") of object(currencyInfo="usd") contains
 
   const swap = () => {
     setFrom(to)
