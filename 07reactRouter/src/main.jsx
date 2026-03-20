@@ -5,6 +5,8 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom';
 import { createBrowserRouter } from 'react-router-dom';
 
+// In this file we are creating the router and defining the routes for our application and then we are rendering the RouterProvider which is responsible for making the router work in our application.
+//  Here we do not render the app component because we have defined the routes for our application and we will render the components according to the routes defined in the router.
 
 import Layout from "./Layout.jsx";
 import Home from "./Components/Home/Home.jsx";
@@ -19,7 +21,7 @@ import Github, {githubInfoLoader}from './Components/Github/Github.jsx'
 
 // const router = createBrowserRouter([
 //   {
-//     path: '/',
+//     path: '/',    // it is the key element which connect from headers Navlink "To"  OR it is top level element of our application inside which we were nesited all other components like home,about etc.
 //     element:<Layout/>,
 //     children:[
 //       {

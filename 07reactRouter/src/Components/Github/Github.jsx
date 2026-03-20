@@ -3,7 +3,7 @@ import {useLoaderData} from 'react-router-dom'
 
     //useEffect is use when a component or object is loading or calling
 function Github() {
-    const data = useLoaderData()
+    const data = useLoaderData()// it is used to get the data which is loaded by the loader function in the router
         // const [data, setData] = useState({})
         // useEffect(() => {
         //     fetch('https://api.github.com/users/AlokYadavIIIT')

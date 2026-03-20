@@ -1,14 +1,15 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
-
-
-
+// useState hook is used to manage the state of the component, such as the length of the password, whether numbers and characters are allowed, and the generated password itself.
+// useEffect hook is used to generate a new password whenever the length, numberAllowed, or charAllowed state changes. It also ensures that the password is generated when the component mounts.
+// useCallback hook is used to memoize the function and prevent unnecessary re-renders;
+// useRef hook is used to create a reference to the input element, which allows us to access its value and select it when copying the password to the clipboard.
 function App() {
   const [length, setLength] = useState(8)
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false)
   const [password, setPassword] = useState("")
 
-  //useRef hook
+  //useRef hook is used to create a reference to the input element, which allows us to access its value and select it when copying the password to the clipboard.
   const passwordRef = useRef(null)
 
   const passwordGenerator = useCallback(() => {
@@ -26,18 +27,20 @@ function App() {
     setPassword(pass)
 
 
-  }, [length, numberAllowed, charAllowed, setPassword])
+  }, [length, numberAllowed, charAllowed, setPassword])// it will only re-create the function if any of the dependencies (length, numberAllowed, charAllowed, setPassword) change.
+//   ^ we use only setPassword as dependency rather than password because we are not using the current value of password in the function, we are only updating it. If we include password as a dependency, it would cause the function to be re-created every time the password state changes, which is unnecessary and could lead to performance issues.
+  
 
-  const copyPasswordToClipboard = useCallback(() => {
-    passwordRef.current?.select();
+const copyPasswordToClipboard = useCallback(() => {// Select the password text and copy it to the clipboard
+    passwordRef.current?.select();// The optional chaining operator (?.) is used to ensure that the select method is only called if passwordRef.current is not null or undefined. This prevents potential errors if the reference has not been assigned to an element yet.
     passwordRef.current?.setSelectionRange(0, 999);
     window.navigator.clipboard.writeText(password)
   }, [password])
 
+
   useEffect(() => {
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
-  
   return (
     
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">

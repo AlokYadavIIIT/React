@@ -26,9 +26,9 @@ function InputBox({
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number"
                     placeholder="Amount"
-                    disabled={amountDisable}
+                    disabled={amountDisable}// if amountDisable is true then the input field will be disabled and user cannot change the value of it.
                     value={amount}
-                    onChange={(e) => onAmountChange && 
+                    onChange={(e) => onAmountChange && // if onAmountChange function is passed as a prop then only it will be called when the value of input field changes. 
                         onAmountChange(Number(e.target.value))
                     }
                 />
